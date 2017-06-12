@@ -16,8 +16,8 @@ class Motor:public Servo
 
 private:
   
-  int limitMax;
-  int limitMin;
+  int limitMax=180;
+  int limitMin=0;
 
 public: 
   
@@ -25,12 +25,12 @@ public:
   void doAngle(int); //Angle
   
   void setLimitMax(int);
-  int getLimitMax(int);
+  int getLimitMax();
   
   void setLimitMin(int);
-  int getLimitMin(int);
+  int getLimitMin();
 };
 
 
-#endif /* MOTOR_H */
+#endif /* DEFSERVO_H */
 

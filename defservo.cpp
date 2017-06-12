@@ -6,14 +6,17 @@
 void Motor::iniServo(int pin, int limitmin , int limitmax)
 {
 
-  Servo::attach(pin);
+  Motor::attach(pin);
   Motor::setLimitMin(limitmin);
   Motor::setLimitMax(limitmax);
 }
 
 void Motor::doAngle(int angle) //Angle
 {
-  Servo::write(angle);        
+  angle = abs(angle);
+  if(this->limitMax < angle) { angle = this->limitMax;}
+  if(this->limitMin > angle) { angle = this->limitMin;}
+  Motor::write(angle);        
 }
 
 void Motor::setLimitMax(int limitmax)
@@ -21,7 +24,7 @@ void Motor::setLimitMax(int limitmax)
     this->limitMax = limitmax;
   }
   
-  int Motor::getLimitMax(int limitmax)
+  int Motor::getLimitMax()
   {
     return this->limitMax;
   }
@@ -31,7 +34,7 @@ void Motor::setLimitMin(int limitmin)
     this->limitMin = limitmin;
   }
   
-  int Motor::getLimitMin(int limitmin)
+  int Motor::getLimitMin()
   {
     return this->limitMin;
   }

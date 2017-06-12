@@ -1,23 +1,23 @@
 /*
       Robot Inmoov Paul Et Benoit
-     
+      RH : hanah@dagoma.fr
 */
  #include <Servo.h>
  #include "defservo.h"
+ #include "config.h"
+ 
  Motor ServoDeTest;
-
+ ConfigInmoov InmoovROBOT; //POUCE
+ 
+ 
 // the setup routine runs once when you press reset:
 void setup() {        
-    ServoDeTest.iniServo(2,60,80);
+    InmoovROBOT.runMotorConfig(1);
+
     
-  // initialize the digital pin as an output.
 }
 
 // the loop routine runs over and over again forever:
 void loop() {
-
-delay(250);
-ServoDeTest.doAngle(60);
-delay(250);
-ServoDeTest.doAngle(80);
+InmoovROBOT.runTEST();
 }
