@@ -3,7 +3,7 @@
 #include <Arduino.h>
 #include "motor.h"
 
-void Motor::initServo(int pin, int limitmin , int limitmax)
+Motor::Motor(int pin, int limitmin , int limitmax)
 {
 
   Motor::attach(pin);

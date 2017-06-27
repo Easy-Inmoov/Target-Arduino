@@ -21,7 +21,7 @@ private:
 
 public: 
   
-  void initServo(int, int, int); //PIN , Limit Min , Limit Max   
+  Motor(int, int, int); //PIN , Limit Min , Limit Max   
   void setAngle(int); //Angle
   
   void setLimitMax(int);
