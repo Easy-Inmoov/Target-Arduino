@@ -21,8 +21,8 @@ private:
 
 public: 
   
-  void iniServo(int, int, int); //PIN , Limit Min , Limit Max   
-  void doAngle(int); //Angle
+  void initServo(int, int, int); //PIN , Limit Min , Limit Max   
+  void setAngle(int); //Angle
   
   void setLimitMax(int);
   int getLimitMax();
