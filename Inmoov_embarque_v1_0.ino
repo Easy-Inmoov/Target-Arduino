@@ -5,8 +5,9 @@
  #include <Servo.h>
  #include "motor.h"
  #include "config.h"
+
+#include "limbs/hand.h"
  
- Motor ServoDeTest;
  ConfigInmoov InmoovROBOT; //POUCE
  
  
