@@ -26,11 +26,11 @@ class Hand {
 
 	Hand() :
 	fingers {
-		Motor(1, 0, 180),	
 		Motor(2, 0, 180),	
 		Motor(3, 0, 180),	
 		Motor(4, 0, 180),	
 		Motor(5, 0, 180),	
+		Motor(6, 0, 180),	
 	}
 	{}
 
