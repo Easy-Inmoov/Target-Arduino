@@ -5,13 +5,13 @@ Page de définition des servo
 */
 
 
-#ifndef DEFSERVO_H
-#define DEFSERVO_H
+#ifndef MOTOR_H
+#define MOTOR_H
 
 #include <Arduino.h>
 #include <Servo.h>
 
-class Motor:public Servo
+class Motor: public Servo
 {
 
 private:
@@ -32,5 +32,5 @@ public:
 };
 
 
-#endif /* DEFSERVO_H */
+#endif /* MOTOR_H */
 

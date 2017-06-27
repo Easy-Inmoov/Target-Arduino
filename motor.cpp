@@ -1,7 +1,7 @@
 
 #include <Servo.h>
 #include <Arduino.h>
-#include "defservo.h"
+#include "motor.h"
 
 void Motor::initServo(int pin, int limitmin , int limitmax)
 {

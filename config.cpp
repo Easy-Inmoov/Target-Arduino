@@ -1,7 +1,7 @@
 
 #include <Arduino.h>
 #include "config.h"
-#include "defservo.h"
+#include "motor.h"
 
 Motor MainDroite[5];
 Motor Tete[5];

@@ -3,7 +3,7 @@
       RH : hanah@dagoma.fr
 */
  #include <Servo.h>
- #include "defservo.h"
+ #include "motor.h"
  #include "config.h"
  
  Motor ServoDeTest;

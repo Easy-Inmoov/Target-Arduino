@@ -7,7 +7,7 @@ Page de définition des config
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#include "defservo.h"
+#include "motor.h"
 #include <Arduino.h>
 
 
