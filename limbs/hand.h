@@ -21,23 +21,18 @@
  * TODO get the Motor constructor's parameter from a general config file ?
  */
 class Hand {
-      private:
-	Motor fingers[5];
-
-	Hand() :
-	fingers {
-		Motor(2, 0, 180),	
-		Motor(3, 0, 180),	
-		Motor(4, 0, 180),	
-		Motor(5, 0, 180),	
-		Motor(6, 0, 180),	
-	}
-	{}
-
       public:
+	Hand()
+	    : fingers{
+		  Motor(2, 0, 180), Motor(3, 0, 180), Motor(4, 0, 180),
+		  Motor(5, 0, 180), Motor(6, 0, 180),
+	      } {}
+
 	Motor operator[](int i) const { return fingers[i]; }
 	Motor &operator[](int i) { return fingers[i]; }
 
+      private:
+	Motor fingers[5];
 };
 
 #endif /* end HAND_H_ */
