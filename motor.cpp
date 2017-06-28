@@ -1,9 +1,9 @@
 
 #include <Servo.h>
 #include <Arduino.h>
-#include "defservo.h"
+#include "motor.h"
 
-void Motor::iniServo(int pin, int limitmin , int limitmax)
+Motor::Motor(int pin, int limitmin , int limitmax)
 {
 
   Motor::attach(pin);
@@ -11,7 +11,7 @@ void Motor::iniServo(int pin, int limitmin , int limitmax)
   Motor::setLimitMax(limitmax);
 }
 
-void Motor::doAngle(int angle) //Angle
+void Motor::setAngle(int angle) //Angle
 {
   angle = abs(angle);
   if(this->limitMax < angle) { angle = this->limitMax;}
