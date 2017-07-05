@@ -4,9 +4,14 @@
 #include "../motor.h"
 
 class Limb {
-	virtual Motor operator[](int i) const = 0;
-	virtual Motor &operator[](int i) = 0;
+	public:
+	virtual Motor operator[](int i) const { return *(motors+i); }
+	virtual Motor &operator[](int i) { return *(motors+i); }
 
+	Limb(Motor* motors) : motors(motors) {}
+
+	private:
+	Motor* motors;
 };
 
 #endif /* end LIMB_H_ */

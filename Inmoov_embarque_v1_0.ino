@@ -7,10 +7,10 @@
 // #include "config.h"
 #include "demo.h"
 
-#include "limbs/hand.h"
+#include "limbs/limbs_creation.h"
 
 // ConfigInmoov InmoovROBOT; //POUCE
- Hand rightHand;
+extern Limb rightHand;
 
 
 // the setup routine runs once when you press reset:
