@@ -2,6 +2,7 @@
 #define HAND_H_
 
 #include "../motor.h"
+#include "limb.h"
 
 /**
  * @brief Class that represents a hand
@@ -20,7 +21,7 @@
  *
  * TODO get the Motor constructor's parameter from a general config file ?
  */
-class Hand {
+class Hand : public Limb {
       public:
 	Hand()
 	    : fingers{
@@ -28,8 +29,8 @@ class Hand {
 		  Motor(5, 0, 180), Motor(6, 0, 180),
 	      } {}
 
-	Motor operator[](int i) const { return fingers[i]; }
-	Motor &operator[](int i) { return fingers[i]; }
+	Motor operator[](int i) const override { return fingers[i]; }
+	Motor &operator[](int i) override { return fingers[i]; }
 
       private:
 	Motor fingers[5];
