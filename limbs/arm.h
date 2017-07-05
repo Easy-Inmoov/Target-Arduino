@@ -1,5 +1,5 @@
-#ifndef HAND_H_
-#define HAND_H_
+#ifndef LEG_H_
+#define LEG_H_
 
 #include "../motor.h"
 #include "limb.h"
@@ -21,19 +21,19 @@
  *
  * TODO get the Motor constructor's parameter from a general config file ?
  */
-class Hand : public Limb {
+class Arm : public Limb {
       public:
-	Hand()
-	    : fingers{
-		  Motor(2), Motor(3), Motor(4),
-		  Motor(5), Motor(6),
+	Arm()
+	    : parts{
+		  Motor(2, 0, 180), Motor(3, 0, 180), Motor(4, 0, 180),
+		  Motor(5, 0, 180), Motor(6, 0, 180),
 	      } {}
 
-	Motor operator[](int i) const override { return fingers[i]; }
-	Motor &operator[](int i) override { return fingers[i]; }
+	Motor operator[](int i) const override { return parts[i]; }
+	Motor &operator[](int i) override { return parts[i]; }
 
       private:
-	Motor fingers[5];
+	Motor parts[5];
 };
 
-#endif /* end HAND_H_ */
+#endif /* end LEG_H_ */
