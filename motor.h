@@ -16,12 +16,12 @@ class Motor: public Servo
 
 private:
   
-  int limitMax=180;
-  int limitMin=0;
+  int limitMax;
+  int limitMin;
 
 public: 
   
-  Motor(int, int, int); //PIN , Limit Min , Limit Max   
+  Motor(int, int=30, int=150); //PIN , Limit Min , Limit Max   
   void setAngle(int); //Angle
   
   void setLimitMax(int);

@@ -10,11 +10,10 @@
  */
 void demoHand(Hand &hand) {
 	hand[0].setAngle(0);
-	hand[1].setAngle(0);
-	hand[3].setAngle(0);
-	hand[4].setAngle(0);
-
-	hand[2].setAngle(180);
+	hand[1].setAngle(90);
+	hand[2].setAngle(90);
+	hand[3].setAngle(90);
+	hand[4].setAngle(90);
 }
 
 #endif /* end DEMO_H_ */
