@@ -1,19 +1,17 @@
-struct __attribute__((packed)) inmoov_message {
-	char mode;
-	char limb;
-	char motor_id;
-	char debug;
-};
+#ifndef SERIALIZER_H_
+#define SERIALIZER_H_
 
 class Serializer {
       public:
-	int read(inmoov_message *receive_buffer) {
+	int read(InmoovMessage *receive_buffer) {
 		return Serial.readBytes((uint8_t *)receive_buffer,
-					sizeof(inmoov_message));
+					sizeof(InmoovMessage));
 	}
 
-	int write(inmoov_message *send_buffer) {
+	int write(InmoovMessage *send_buffer) {
 		return Serial.write((uint8_t *)send_buffer,
-				    sizeof(inmoov_message));
+				    sizeof(InmoovMessage));
 	}
 };
+
+#endif
